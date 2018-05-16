@@ -8,4 +8,5 @@ export class AppPage {
   getParagraphText() {
     return element(by.css('md-root h1')).getText();
   }
+
 }

@@ -7,8 +7,8 @@ describe('md App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should load landing page', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Timer');
   });
 });
