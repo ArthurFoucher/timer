@@ -120,13 +120,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "md",
+      "timer",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "md",
+      "timer",
       "kebab-case"
     ],
     "no-output-on-prefix": true,

@@ -1,9 +1,15 @@
 import { ButtonComponent } from './button';
+import { LandingComponent } from './landing';
+import { CircleComponent } from './circle';
 
 export {
-  ButtonComponent
+  ButtonComponent,
+  LandingComponent,
+  CircleComponent,
 };
 
-export default {
-  ButtonComponent
-};
+export default [
+  ButtonComponent,
+  LandingComponent,
+  CircleComponent,
+];

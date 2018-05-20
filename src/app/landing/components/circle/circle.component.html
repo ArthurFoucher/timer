@@ -1,0 +1,21 @@
+<div class="circle">
+  <svg class="circle-chart" [attr.height]="dimension" [attr.width]="dimension" xmlns="http://www.w3.org/2000/svg">
+    <circle class="circle-chart__background"
+            stroke="#efefef"
+            stroke-width="2"
+            fill="none"
+            [attr.cx]="x"
+            [attr.cy]="y"
+            [attr.r]="radius"
+    ></circle>
+    <circle class="circle-chart__circle"
+            [@circleState]="state"
+            stroke-width="2"
+            stroke-linecap="round"
+            fill="none"
+            [attr.cx]="x"
+            [attr.cy]="y"
+            [attr.r]="radius"
+    ></circle>
+  </svg>
+</div>

@@ -1,0 +1,11 @@
+@import "../../../../theme.scss";
+
+.circle-chart {
+  transform: rotate(-90deg);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+
+  &__circle {
+    stroke: mat-color($app-accent);
+  }
+}

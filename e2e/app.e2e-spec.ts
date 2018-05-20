@@ -9,6 +9,5 @@ describe('md App', () => {
 
   it('should load landing page', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Timer');
   });
 });

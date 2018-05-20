@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LandingRoutingModule } from './landing-routing.module';
-import { ButtonComponent } from './components';
 import { MdModule } from '../md/md.module';
+
+import components from './components';
+import services from './services';
+import { CircleComponent } from './components/circle/circle.component';
 
 @NgModule({
   imports: [
@@ -10,7 +13,13 @@ import { MdModule } from '../md/md.module';
     LandingRoutingModule,
     MdModule,
   ],
-  declarations: [ButtonComponent],
+  declarations: [
+    ...components,
+    CircleComponent,
+  ],
+  providers: [
+    ...services,
+  ],
 })
 export class LandingModule {
 }

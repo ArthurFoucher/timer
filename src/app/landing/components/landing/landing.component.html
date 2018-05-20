@@ -1,0 +1,12 @@
+<div class="landing">
+  <div class="landing__body">
+    <timer-circle class="landing__body__circle" [clicked]="clicked"></timer-circle>
+    <div class="landing__body__time mat-primary">
+      {{time$ | async}}
+    </div>
+  </div>
+
+  <div class="landing__bottom-bar">
+    <timer-button (clicked)="onClicked()"></timer-button>
+  </div>
+</div>
