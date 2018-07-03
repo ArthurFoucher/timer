@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ClockService } from '../../services/clock';
 import { Observable } from 'rxjs/Observable';
+
+enum State {
+  start,
+  stop,
+}
 
 @Component({
   selector: 'timer-landing',
@@ -9,20 +14,27 @@ import { Observable } from 'rxjs/Observable';
 })
 export class LandingComponent {
   public time$: Observable<number>;
-  public clicked = 0;
+  public state = State.stop;
 
   constructor(
     private clockService: ClockService,
   ) {
   }
 
-  onClicked() {
-    this.clicked += 1;
-    if (this.clicked % 2 === 1) {
-      this.time$ = this.clockService.startClock();
-    } else {
-      this.time$ = null;
-      this.clockService.stopClock();
+  onClicked(): void {
+    switch (this.state) {
+      case State.stop:
+        this.state = State.start;
+        this.time$ = this.clockService.startClock();
+        return;
+      case State.start:
+        this.time$ = null;
+        this.clockService.stopClock();
+        this.state = State.stop;
+        return;
+      default:
+        this.state = State.stop;
+        return;
     }
   }
 }

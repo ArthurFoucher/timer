@@ -5,7 +5,6 @@ import { MdModule } from '../md/md.module';
 
 import components from './components';
 import services from './services';
-import { CircleComponent } from './components/circle/circle.component';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { CircleComponent } from './components/circle/circle.component';
   ],
   declarations: [
     ...components,
-    CircleComponent,
   ],
   providers: [
     ...services,
